@@ -47,9 +47,9 @@ root.addEventListener('click', (event) => {
   if (!card) return;
   const expert = window.NASS_EXPERTS.find((item) => item.name === card.dataset.name);
   const profile = expert.profile || {};
-  const section = (title, items) => {
+  const section = (title, items, className = '') => {
     const normalizedItems = normalizeProfileItems(items);
-    return normalizedItems.length ? `<section class="profile-section"><h3>${title}</h3><ul>${normalizedItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : '';
+    return normalizedItems.length ? `<section class="profile-section ${className}"><h3>${title}</h3><ul>${normalizedItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : '';
   };
   modal.querySelector('.modal-media').innerHTML = expert.image ? `<img src="./assets/experts/${expert.image}" alt="${expert.name}">` : `<span class="person-mark">${expert.name.split(' ').map((part) => part[0]).join('').slice(0, 2)}</span>`;
   modal.querySelector('.modal-copy').innerHTML = `
@@ -58,8 +58,8 @@ root.addEventListener('click', (event) => {
     ${profile.summary ? `<p class="profile-summary">${profile.summary}</p>` : ''}
     ${(profile.metrics || []).length ? `<div class="profile-metrics">${profile.metrics.map((item) => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
     <div class="profile-grid">
+      ${section('Масштаб и направления практики', profile.practice, 'profile-section-wide')}
       ${section('Регалии и профессиональные роли', profile.credentials)}
-      ${section('Масштаб и направления практики', profile.practice)}
       ${section('Ключевые достижения', profile.achievements)}
       ${section('Опыт', profile.experience)}
       ${section('Компетенции', profile.competencies)}
