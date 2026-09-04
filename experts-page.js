@@ -8,6 +8,7 @@ window.NASS_EXPERTS.forEach((expert) => {
   const fields = [
     expert.name, expert.role, profile.summary,
     ...(profile.credentials || []), ...(profile.achievements || []),
+    ...(profile.practice || []), ...(profile.metrics || []),
     ...(profile.experience || []), ...(profile.competencies || []),
     ...(profile.industries || []),
   ];
@@ -55,8 +56,10 @@ root.addEventListener('click', (event) => {
     <p class="section-index">${expert.group}</p><h2>${expert.name}</h2>
     <p class="modal-role">${cleanRole(expert.role)}</p>
     ${profile.summary ? `<p class="profile-summary">${profile.summary}</p>` : ''}
+    ${(profile.metrics || []).length ? `<div class="profile-metrics">${profile.metrics.map((item) => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
     <div class="profile-grid">
       ${section('Регалии и профессиональные роли', profile.credentials)}
+      ${section('Масштаб и направления практики', profile.practice)}
       ${section('Ключевые достижения', profile.achievements)}
       ${section('Опыт', profile.experience)}
       ${section('Компетенции', profile.competencies)}

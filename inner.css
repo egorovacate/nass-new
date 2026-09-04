@@ -7,3 +7,4 @@
 .content-section:not(.alt){background:#f7f5f0}
 .content-section.alt{background:#e4ddd1}
 .content-section+.content-section{border-top:1px solid rgba(92,112,128,.12)}
+.profile-metrics{clear:both;display:flex;flex-wrap:wrap;gap:8px;padding-top:24px}.profile-metrics span{padding:8px 11px;border-radius:100px;background:var(--navy);color:#fff;font-size:11px;font-weight:700}.profile-metrics+.profile-grid{margin-top:24px}
