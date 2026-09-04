@@ -1,6 +1,6 @@
 const header = document.querySelector('[data-site-header]');
 const footer = document.querySelector('[data-site-footer]');
-document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="./responsive-fixes.css?v=3">');
+document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="./responsive-fixes.css?v=4">');
 const fileName = location.pathname.split('/').pop() || 'index.html';
 const isEnglish = document.documentElement.lang === 'en' || fileName.includes('-en.html');
 const baseName = fileName.replace('-en.html', '.html');

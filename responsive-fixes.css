@@ -45,3 +45,54 @@ html,body{max-width:100%;overflow-x:hidden}.page-hero,.content-section,.cta-band
 .request-panel{display:none!important}
 .request-categories{counter-reset:request}.request-categories article{position:relative;min-height:88px;padding:30px 18px 18px 48px;background:linear-gradient(145deg,#fff 0%,#f1f5f3 100%);border-top:3px solid var(--cyan);transition:transform .2s,box-shadow .2s}.request-categories article:nth-child(3n+2){border-top-color:#6c91a0;background:linear-gradient(145deg,#fff 0%,#e8e1d6 100%)}.request-categories article:nth-child(3n){border-top-color:var(--navy);background:linear-gradient(145deg,#fff 0%,#e5f4f5 100%)}.request-categories article::before{counter-increment:request;content:counter(request,decimal-leading-zero);position:absolute;left:18px;top:14px;color:#6c91a0;font-size:11px;font-weight:700;letter-spacing:.08em}.request-categories article:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(19,34,56,.1)}
 .service-detail .prose>p{padding:22px 24px;background:rgba(255,255,255,.56);border-left:3px solid var(--cyan);margin:18px 0}
+
+/* Mobile typography and containment: keep long words readable on every page. */
+@media(max-width:620px){
+  .site-header{grid-template-columns:minmax(0,1fr) auto auto!important}
+
+  h1,h2,h3,.page-hero h1,.content-head h2,.long-card h2,.cta-band h2,
+  .people-group>h2,.detail-panel h3,.info-card h3{
+    max-width:100%;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    hyphens:none;
+  }
+
+  .page-hero h1{
+    font-size:clamp(23px,6.8vw,27px)!important;
+    line-height:1.08;
+    letter-spacing:-.035em;
+  }
+
+  .content-head h2,.people-group>h2{
+    font-size:clamp(22px,6.5vw,26px)!important;
+    line-height:1.12;
+  }
+
+  .long-card h2{font-size:23px!important;line-height:1.16}
+  .cta-band h2{font-size:clamp(27px,8vw,32px)!important}
+  .hero h1{font-size:clamp(47px,14vw,56px)!important;line-height:1.05}
+  .hero-signal{display:none}
+
+  .info-card h3,.detail-panel h3,.process-grid h3,.agenda h3,
+  .event-grid h3,.program h3,.news-item h3,.doc-item h3,.long-card h3{
+    font-size:17px!important;
+    line-height:1.25;
+  }
+
+  .metric-grid strong{font-size:24px!important}
+
+  .hero-copy,.content-head,.content-head>*,.long-card,.detail-panel,.info-card,
+  .prose,.doc-item,.news-item,.person,.program{
+    min-width:0;
+    max-width:100%;
+  }
+
+  .page-hero p,.content-section p,.content-section li,.hero-lead{
+    overflow-wrap:break-word;
+    word-break:normal;
+  }
+
+  .hero-bottom{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-stat{min-width:0}
+}
