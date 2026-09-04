@@ -1,0 +1,129 @@
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:35px 0 55px}.process-grid article{background:#fff;padding:28px}.process-grid b{font-family:var(--display);font-size:28px;color:#6c91a0}.process-grid h3{margin:25px 0 10px}.process-grid p{margin:0;color:#657184;font-size:14px}.table-wrap{overflow:auto;margin:35px 0}.compare-table{width:100%;min-width:900px;border-collapse:collapse;background:#fff}.compare-table th,.compare-table td{padding:20px;text-align:left;vertical-align:top;border:1px solid var(--line);font-size:14px}.compare-table thead th{background:var(--navy);color:#fff}.compare-table tbody th{width:190px;background:#eef0ed}.notice{margin:40px 0 0;padding:28px;border-left:4px solid var(--cyan);background:#fff}.notice h3{margin:0 0 8px}.notice p{margin:0}.prose{max-width:1050px}.prose h2{margin:65px 0 20px}.prose h3{margin:35px 0 12px}.prose p,.prose li{color:#4f5e70}.prose li+li{margin-top:8px}.faq-full details{background:#fff;border:1px solid var(--line);padding:0 24px}.faq-full details+details{margin-top:12px}.faq-full summary{cursor:pointer;font-weight:700;padding:22px 0}.faq-answer{padding:0 0 25px}.faq-answer p:first-child{margin-top:0}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.metric-grid article{padding:28px;background:#fff;border:1px solid var(--line)}.metric-grid strong{display:block;font-family:var(--display);font-size:32px;margin-bottom:8px}.article-list{display:grid;gap:22px}.long-card{padding:34px;background:#fff;border:1px solid var(--line)}.long-card h2,.long-card h3{margin-top:0}.long-card .meta{color:#718092;font-size:12px;text-transform:uppercase;letter-spacing:.1em}.long-card blockquote{margin:25px 0;padding-left:22px;border-left:3px solid var(--cyan);font-size:18px}.agenda{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.agenda article{padding:22px;background:#fff;border:1px solid var(--line)}@media(max-width:900px){.process-grid,.metric-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.process-grid,.metric-grid,.agenda{grid-template-columns:1fr}.compare-table th,.compare-table td{padding:14px}}
+.page-co-mentoring #process .process-grid,.page-ai-transformation #process .process-grid{grid-template-columns:repeat(5,1fr)}
+.page-co-mentoring #result .metric-grid article{border-top:4px solid var(--cyan);background:linear-gradient(145deg,#fff 0%,#f1f5f3 100%);padding:30px}
+.page-co-mentoring #result .metric-grid article:nth-child(2){border-top-color:#6c91a0;background:linear-gradient(145deg,#fff 0%,#e8e1d6 100%)}
+.page-co-mentoring #result .metric-grid article:nth-child(3){border-top-color:var(--navy);background:linear-gradient(145deg,#fff 0%,#e5f4f5 100%)}
+@media(max-width:900px){.page-co-mentoring #process .process-grid,.page-ai-transformation #process .process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.page-co-mentoring #process .process-grid,.page-ai-transformation #process .process-grid{grid-template-columns:1fr}}
+.service-detail .process-grid{background:transparent!important;border:0!important;gap:16px!important}
+.request-panel{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important}
+.ai-result .prose ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}.ai-result .prose li{margin:0!important;padding:20px 22px;background:rgba(255,255,255,.62);border:1px solid var(--line);color:#4f5e70}.ai-result .prose li::before{content:'✓';display:block;margin-bottom:10px;color:var(--cyan);font-weight:700}@media(max-width:620px){.ai-result .prose ul{grid-template-columns:1fr}}
+.metric-grid{width:100%;max-width:100%;min-width:0;box-sizing:border-box;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.content-section#result .metric-grid,
+#english-root .metric-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.metric-grid article{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+.metric-grid strong{min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+html[lang="en"] .person{cursor:default!important;pointer-events:none}
+@media(max-width:900px){.metric-grid,.content-section#result .metric-grid,#english-root .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){.metric-grid,.content-section#result .metric-grid,#english-root .metric-grid{grid-template-columns:minmax(0,1fr)!important}}
+
+/* Unified service-page design system: one card language across all services. */
+.content-section .info-card,
+.content-section .detail-panel,
+.content-section .metric-grid article,
+.content-section .process-grid article,
+.content-section .agenda article,
+.content-section .prose>p,
+.content-section .prose li{
+  border:1px solid rgba(92,112,128,.24)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.content-section .info-card,
+.content-section .detail-panel,
+.content-section .metric-grid article,
+.content-section .process-grid article,
+.content-section .agenda article{
+  background:#fff!important;
+}
+.content-section .info-card,
+.content-section .metric-grid article,
+.content-section .process-grid article,
+.content-section .prose li{
+  border-top:3px solid var(--cyan)!important;
+}
+.content-section .info-card:nth-child(3n+2),
+.content-section .metric-grid article:nth-child(3n+2),
+.content-section .process-grid article:nth-child(3n+2),
+.content-section .prose li:nth-child(3n+2){border-top-color:#6c91a0!important}
+.content-section .info-card:nth-child(3n),
+.content-section .metric-grid article:nth-child(3n),
+.content-section .process-grid article:nth-child(3n),
+.content-section .prose li:nth-child(3n){border-top-color:var(--navy)!important}
+.content-section .prose li{padding:22px 24px!important;margin:0!important}
+.content-section .prose ul{gap:14px!important}
+.content-section .process-grid{gap:14px!important;background:transparent!important;border:0!important}
+.content-section .agenda{gap:14px!important}
+/* Plain explanatory copy stays plain; only intentional cards receive a frame. */
+.content-section .prose>p,
+.content-section .prose h3+p{
+  border:0!important;
+  border-left:0!important;
+  background:transparent!important;
+  padding:0!important;
+  margin:18px 0 30px!important;
+}
+/* Keep long process steps equal and prevent text from changing track widths. */
+.page-ai-transformation #process .process-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+.page-ai-transformation #process .process-grid article{
+  min-width:0!important;
+  max-width:100%;
+  overflow:hidden;
+}
+.page-ai-transformation #process .process-grid h3,
+.page-ai-transformation #process .process-grid p{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+@media(max-width:900px){.page-ai-transformation #process .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){.page-ai-transformation #process .process-grid{grid-template-columns:minmax(0,1fr)!important}}
+
+/* Agenda and request categories share one reusable card pattern. */
+.content-section .agenda{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+  counter-reset:agenda-item;
+}
+.content-section .agenda article{
+  position:relative;
+  min-height:88px;
+  box-sizing:border-box;
+  padding:38px 18px 18px 48px!important;
+  border:1px solid rgba(92,112,128,.24)!important;
+  border-top:3px solid var(--cyan)!important;
+  background:#fff!important;
+}
+.content-section .agenda article::before{
+  counter-increment:agenda-item;
+  content:counter(agenda-item,decimal-leading-zero);
+  position:absolute;
+  left:18px;
+  top:14px;
+  color:#6c91a0;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+.content-section .agenda article:nth-child(3n+2){border-top-color:#6c91a0!important}
+.content-section .agenda article:nth-child(3n){border-top-color:var(--navy)!important}
+@media(max-width:900px){.content-section .agenda{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){.content-section .agenda{grid-template-columns:minmax(0,1fr)!important}}
+
+/* Four co-mentoring result metrics need readable card width. */
+.page-co-mentoring #result .metric-grid,
+#english-root .metric-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+}
+.page-co-mentoring #result .metric-grid strong,
+#english-root .metric-grid strong{
+  font-size:clamp(26px,2.8vw,38px);
+  overflow-wrap:normal;
+  word-break:normal;
+}
+@media(max-width:620px){
+  .page-co-mentoring #result .metric-grid,
+  #english-root .metric-grid{grid-template-columns:minmax(0,1fr)!important}
+}

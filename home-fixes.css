@@ -1,0 +1,72 @@
+.direction-item {
+  display: grid;
+  grid-template-columns: 90px 1fr 56px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+  transition: .25s;
+}
+
+.direction-item[href]:hover {
+  padding-left: 15px;
+  background: rgba(255, 255, 255, .24);
+}
+
+.direction-item-static {
+  grid-template-columns: 90px 1fr;
+  color: #596472;
+}
+
+.expert-portrait img {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.expert-content .expert-profile-link {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e1e3df;
+  padding-top: 16px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.all-experts {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.all-experts .button { border: 1px solid var(--ink); }
+
+.featured-experts-intro { display:flex;justify-content:space-between;align-items:end;gap:40px;margin:52px 0 30px; }
+.featured-experts-intro p { max-width:600px;margin:0;color:#647083; }
+.featured-experts-intro .arrow-link { min-width:280px; }
+.ecosystem{background:#f8f7f2}.knowledge-links{display:grid;grid-template-columns:repeat(4,1fr);margin-top:42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.knowledge-links a{padding:20px;border-right:1px solid var(--line);font-weight:700;font-size:13px}.contact-links{display:flex;flex-direction:column;align-items:flex-start;gap:18px}.contact-links>p{max-width:560px;color:rgba(255,255,255,.65)}.contact-links>a:not(.button){font-size:13px;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:5px}
+.ecosystem .values-row{align-items:stretch}
+.manifesto .values-row article{padding-left:35px}
+.ecosystem .values-row article{display:flex;flex-direction:column;min-height:290px;padding:35px}
+.ecosystem .values-row h3{min-height:2.6em;margin-bottom:18px}
+.ecosystem .values-row p{margin-top:0}
+.event-grid{min-width:0;align-items:stretch}
+.event-grid article{min-width:0;min-height:390px}
+.event-grid h3,.event-grid p{overflow-wrap:anywhere}
+.section-heading,.values-row,.direction-list,.event-grid,.knowledge-links{width:100%;max-width:1440px;margin-left:auto;margin-right:auto}
+.section-heading{margin-bottom:56px}
+.section-heading>h2,.section-heading>div>h2{max-width:900px}
+
+@media (max-width: 620px) {
+  .direction-item { grid-template-columns: 38px 1fr; }
+  .direction-item .circle-arrow { display: none; }
+  .featured-experts-intro { align-items:stretch;flex-direction:column; }
+  .knowledge-links{grid-template-columns:1fr}.knowledge-links a{border-right:0;border-bottom:1px solid var(--line)}
+  .ecosystem .values-row article{min-height:0;padding:25px 0}
+  .ecosystem .values-row h3{min-height:0}
+  .manifesto .values-row article{padding-left:0}
+  .event-grid article{min-height:330px}
+}
